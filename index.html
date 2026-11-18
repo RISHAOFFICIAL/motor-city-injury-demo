@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor City Injury Center — Post-Accident Injury Care in Southfield, MI</title>
+<meta name="description" content="Expert post-accident injury care in Southfield, Michigan. Chiropractic care, pain management, and rehabilitation for auto accident injuries. Michigan No-Fault insurance accepted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B3A5C;
+  --navy-dark:#12293F;
+  --teal:#2A9D8F;
+  --teal-dark:#1F7A6E;
+  --cream:#F7F5F0;
+  --warm-gray:#6B7280;
+  --light-gray:#E5E7EB;
+  --white:#FFFFFF;
+  --gold:#D4A843;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1F2937;line-height:1.6;background:var(--white)}
+h1,h2,h3{font-family:'Merriweather',Georgia,serif;color:var(--navy);line-height:1.3}
+h2{font-size:2rem;margin-bottom:.5rem}
+h3{font-size:1.25rem;margin-bottom:.5rem}
+p{color:#4B5563}
+a{color:var(--teal-dark);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.section-label{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.section-sub{font-size:1.1rem;color:var(--warm-gray);max-width:650px;margin-bottom:36px}
+
+/* Top bar */
+.topbar{background:var(--navy-dark);color:#D1D5DB;font-size:.85rem;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px 16px}
+.topbar a{color:#fff;font-weight:600}
+.topbar .hours{color:#9CA3AF}
+
+/* Header */
+header{background:var(--white);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.08)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:1100px;margin:0 auto}
+.logo{font-family:'Merriweather',Georgia,serif;font-weight:900;font-size:1.35rem;color:var(--navy);line-height:1.1}
+.logo span{color:var(--teal)}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--warm-gray)}
+nav{display:flex;gap:28px;align-items:center}
+nav a{color:#374151;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--teal-dark)}
+.btn{display:inline-block;padding:12px 28px;border-radius:6px;font-weight:700;font-size:.95rem;cursor:pointer;border:none;transition:all .2s}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-dark)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-dark)}
+.btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:#F3F4F6}
+.header-phone{font-weight:700;color:var(--navy);font-size:1.05rem;white-space:nowrap}
+.header-phone span{color:var(--teal)}
+.mobile-menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--navy)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);color:#fff;padding:80px 0 70px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-100px;top:-100px;width:400px;height:400px;background:rgba(42,157,143,.15);border-radius:50%}
+.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.hero h1{color:#fff;font-size:2.6rem;margin-bottom:16px}
+.hero h1 span{color:var(--teal)}
+.hero p{color:#D1D5DB;font-size:1.15rem;margin-bottom:28px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hero-stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px}
+.hero-stat .icon{font-size:1.5rem;margin-bottom:6px}
+.hero-stat strong{display:block;color:#fff;font-size:.95rem}
+.hero-stat span{color:#9CA3AF;font-size:.85rem}
+.hero-img{border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:380px}
+
+/* Trust bar */
+.trust-bar{background:var(--cream);padding:20px 0;border-bottom:1px solid var(--light-gray)}
+.trust-bar .container{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;text-align:center}
+.trust-item{font-weight:600;color:var(--navy);font-size:.95rem}
+.trust-item span{color:var(--teal);margin-right:6px}
+
+/* What we treat */
+.treat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.treat-card{background:var(--cream);border-radius:12px;padding:28px;border-left:4px solid var(--teal)}
+.treat-card h3{font-size:1.1rem;margin-bottom:8px}
+.treat-card p{font-size:.95rem}
+
+/* Services */
+.services{background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.service-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.service-card img{width:100%;height:200px;object-fit:cover;display:block}
+.service-card-body{padding:28px}
+.service-card-body h3{font-size:1.3rem}
+.service-card-body p{margin-bottom:16px;font-size:.95rem}
+.service-card-body ul{list-style:none;padding:0}
+.service-card-body li{padding:6px 0 6px 24px;position:relative;font-size:.92rem;color:#4B5563}
+.service-card-body li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-weight:700}
+
+/* Accident steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;counter-reset:step}
+.step{background:#fff;border:1px solid var(--light-gray);border-radius:12px;padding:28px 24px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-18px;left:20px;background:var(--teal);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem}
+.step h3{font-size:1.05rem;margin-top:12px;margin-bottom:8px}
+.step p{font-size:.92rem}
+
+/* Insurance */
+.insurance{background:var(--navy);color:#fff}
+.insurance h2{color:#fff}
+.insurance .section-sub{color:#D1D5DB}
+.insurance-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.insurance-points{list-style:none;padding:0}
+.insurance-points li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;gap:14px;align-items:flex-start}
+.insurance-points li:last-child{border-bottom:none}
+.insurance-points .check{color:var(--teal);font-size:1.3rem;flex-shrink:0}
+.insurance-points strong{color:#fff;display:block}
+.insurance-points span{color:#D1D5DB;font-size:.92rem}
+.insurance-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:32px;text-align:center}
+.insurance-box h3{color:#fff;font-size:1.3rem;margin-bottom:12px}
+.insurance-box p{color:#D1D5DB;margin-bottom:20px}
+.insurance-box .big{font-size:2.2rem;font-weight:800;color:var(--teal);font-family:'Merriweather',serif}
+
+/* Why choose */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.why-card{text-align:center;padding:32px 24px}
+.why-card .icon{font-size:2.5rem;margin-bottom:16px}
+.why-card h3{font-size:1.15rem}
+.why-card p{font-size:.93rem}
+
+/* Journey */
+.journey{background:var(--cream)}
+.journey-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+.journey-timeline::before{content:'';position:absolute;top:32px;left:8%;right:8%;height:2px;background:var(--teal);opacity:.3;z-index:0}
+.journey-step{background:#fff;border-radius:14px;padding:32px 28px;position:relative;z-index:1;box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.journey-step .phase{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.journey-step h3{font-size:1.2rem;margin-bottom:10px}
+.journey-step p{font-size:.93rem}
+.journey-step ul{list-style:none;padding:0;margin-top:12px}
+.journey-step li{padding:4px 0 4px 20px;position:relative;font-size:.9rem;color:#4B5563}
+.journey-step li::before{content:'•';position:absolute;left:0;color:var(--teal);font-weight:700}
+
+/* Testimonials */
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.testimonial{background:var(--cream);border-radius:14px;padding:32px;position:relative}
+.testimonial .stars{color:var(--gold);font-size:1.2rem;margin-bottom:12px;letter-spacing:2px}
+.testimonial blockquote{font-size:1.05rem;color:#374151;font-style:italic;margin-bottom:16px;line-height:1.6}
+.testimonial .author{font-weight:700;color:var(--navy);font-size:.95rem}
+.testimonial .author span{display:block;font-weight:400;color:var(--warm-gray);font-size:.85rem}
+
+/* Visit + Form */
+.visit-section{background:var(--navy-dark);color:#fff}
+.visit-section h2{color:#fff}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.visit-info h3{color:#fff;margin-top:28px;margin-bottom:8px}
+.visit-info h3:first-child{margin-top:0}
+.visit-info p{color:#D1D5DB}
+.visit-info a{color:#fff;font-weight:600}
+.hours-table{width:100%;border-collapse:collapse;margin-top:8px}
+.hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);color:#D1D5DB;font-size:.95rem}
+.hours-table td:last-child{text-align:right;font-weight:600;color:#fff}
+.open-pill{display:inline-block;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:700;margin-top:12px}
+.open-pill.open{background:#10B981;color:#fff}
+.open-pill.closed{background:#EF4444;color:#fff}
+.form-card{background:#fff;border-radius:14px;padding:36px;color:#1F2937}
+.form-card h3{font-size:1.4rem;margin-bottom:8px}
+.form-card p{font-size:.93rem;margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-weight:600;font-size:.88rem;margin-bottom:6px;color:#374151}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1px solid #D1D5DB;border-radius:8px;font-size:.95rem;font-family:inherit}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(42,157,143,.15)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-success{display:none;background:#D1FAE5;border:1px solid #6EE7B7;color:#065F46;padding:16px;border-radius:8px;margin-top:16px;font-weight:600;text-align:center}
+
+/* CTA band */
+.cta-band{background:var(--teal);color:#fff;text-align:center;padding:56px 0}
+.cta-band h2{color:#fff;font-size:1.8rem;margin-bottom:12px}
+.cta-band p{color:rgba(255,255,255,.85);font-size:1.1rem;margin-bottom:24px}
+.cta-band .btn{margin:0 6px}
+
+/* Footer */
+footer{background:var(--navy-dark);color:#9CA3AF;padding:48px 0 24px;font-size:.88rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-grid h4{color:#fff;font-size:.95rem;margin-bottom:12px}
+.footer-grid a{color:#9CA3AF;display:block;padding:3px 0}
+.footer-grid a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:.82rem;color:#6B7280}
+.footer-bottom p{color:#6B7280}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero .container{grid-template-columns:1fr}
+  .hero-img{display:none}
+  .insurance-grid{grid-template-columns:1fr}
+  .journey-timeline{grid-template-columns:1fr}
+  .journey-timeline::before{display:none}
+  .visit-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  nav{display:none}
+  .mobile-menu-btn{display:block}
+  .header-phone{display:none}
+  h2{font-size:1.6rem}
+  .hero h1{font-size:2rem}
+  section{padding:48px 0}
+}
+@media(max-width:500px){
+  .form-row{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <span>📍 17515 W 9 Mile Rd, Ste 180, Southfield, MI 48075</span>
+    <span class="hours">Mon, Tue &amp; Thu · 9 AM – 5 PM &nbsp;|&nbsp; <a href="tel:+12482309080">(248) 230-9080</a></span>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">MOTOR CITY <span>INJURY CENTER</span><small>Post-Accident Care · Southfield, MI</small></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#after-accident">After an Accident</a>
+      <a href="#insurance">Insurance</a>
+      <a href="#about">About</a>
+      <a href="#visit">Contact</a>
+      <a href="tel:+12482309080" class="header-phone">📞 <span>(248)</span> 230-9080</a>
+      <a href="#appointment" class="btn btn-teal">Book Appointment</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="alert('Call (248) 230-9080 to book your appointment.')">☰</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" style="padding-top:70px">
+  <div class="container">
+    <div>
+      <h1>Injured in a Car Accident? <span>We Can Help You Recover.</span></h1>
+      <p>Specialized post-accident injury care in Southfield, Michigan. Our multidisciplinary team of chiropractors, medical doctors, and nurse practitioners works together to get you back to your pre-accident life.</p>
+      <div class="hero-ctas">
+        <a href="#appointment" class="btn btn-teal">Book Your Appointment →</a>
+        <a href="tel:+12482309080" class="btn btn-white">Call (248) 230-9080</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="icon">🆓</div><strong>Free Consultation</strong><span>Your first evaluation is on us</span></div>
+        <div class="hero-stat"><div class="icon">⚡</div><strong>Same-Day Appointments</strong><span>Get seen quickly when it matters most</span></div>
+        <div class="hero-stat"><div class="icon">🛡️</div><strong>No-Fault Insurance Accepted</strong><span>Michigan PIP covers your care</span></div>
+        <div class="hero-stat"><div class="icon">👥</div><strong>Multidisciplinary Team</strong><span>Chiropractor, MD &amp; NP working together</span></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Healthcare professional reviewing patient care">
+    </div>
+  </div>
+</section>
+
+<!-- Trust bar -->
+<div class="trust-bar">
+  <div class="container">
+    <span class="trust-item"><span>✓</span> Michigan No-Fault Accepted</span>
+    <span class="trust-item"><span>✓</span> No Referral Needed</span>
+    <span class="trust-item"><span>✓</span> Walk-Ins Welcome</span>
+    <span class="trust-item"><span>✓</span> Same-Week Appointments</span>
+    <span class="trust-item"><span>✓</span> All Paperwork Handled</span>
+  </div>
+</div>
+
+<!-- What We Treat -->
+<section id="treat">
+  <div class="container">
+    <p class="section-label">What We Treat</p>
+    <h2>Common Auto Accident Injuries</h2>
+    <p class="section-sub">Car accidents cause injuries that are not always obvious right away. Our team is trained to find and treat the hidden damage that can cause long-term pain if left untreated.</p>
+    <div class="treat-grid">
+      <div class="treat-card">
+        <h3>Whiplash</h3>
+        <p>Neck strain from sudden back-and-forth movement. Causes neck pain, stiffness, headaches, and dizziness. One of the most common car accident injuries.</p>
+      </div>
+      <div class="treat-card">
+        <h3>Back &amp; Spinal Injuries</h3>
+        <p>Herniated discs, spinal misalignment, and lower back pain from impact forces. Early treatment prevents chronic pain.</p>
+      </div>
+      <div class="treat-card">
+        <h3>Neck Pain &amp; Stiffness</h3>
+        <p>Muscle strain, pinched nerves, and reduced range of motion in the neck and shoulders after a collision.</p>
+      </div>
+      <div class="treat-card">
+        <h3>Headaches &amp; Migraines</h3>
+        <p>Post-accident headaches caused by neck tension, concussion, or spinal misalignment. We identify the root cause.</p>
+      </div>
+      <div class="treat-card">
+        <h3>Soft Tissue Injuries</h3>
+        <p>Sprains, strains, bruising, and muscle damage throughout the body. Proper rehabilitation prevents scar tissue and stiffness.</p>
+      </div>
+      <div class="treat-card">
+        <h3>Joint &amp; Extremity Pain</h3>
+        <p>Shoulder, knee, wrist, and ankle injuries from bracing during impact or direct contact with the vehicle interior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="services">
+  <div class="container">
+    <p class="section-label">Our Services</p>
+    <h2>Comprehensive Care Under One Roof</h2>
+    <p class="section-sub">We provide a full spectrum of post-accident services so you do not need to visit multiple offices. One team, one plan, one path to recovery.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80" alt="Chiropractic adjustment">
+        <div class="service-card-body">
+          <h3>Chiropractic Care</h3>
+          <p>Non-invasive adjustments targeting spinal alignment to resolve neck pain, back pain, and headaches frequently caused by collisions.</p>
+          <ul>
+            <li>Spinal adjustments &amp; alignment</li>
+            <li>Whiplash treatment</li>
+            <li>Posture correction</li>
+            <li>Range of motion restoration</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Pain management therapy">
+        <div class="service-card-body">
+          <h3>Pain Management</h3>
+          <p>Comprehensive strategies to alleviate acute and chronic pain post-accident through modern interventional techniques and specialized therapy.</p>
+          <ul>
+            <li>Acute &amp; chronic pain relief</li>
+            <li>Interventional techniques</li>
+            <li>Medication management</li>
+            <li>Non-surgical approaches first</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Physical rehabilitation exercises">
+        <div class="service-card-body">
+          <h3>Rehabilitation</h3>
+          <p>Guided therapy and rehabilitation programs designed to restore mobility, strength, and function after auto-related injuries.</p>
+          <ul>
+            <li>Physical therapy &amp; exercise</li>
+            <li>Strength &amp; mobility training</li>
+            <li>Functional restoration</li>
+            <li>Return-to-work programs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What to Do After an Accident -->
+<section id="after-accident">
+  <div class="container">
+    <p class="section-label">Step by Step</p>
+    <h2>What to Do After a Car Accident</h2>
+    <p class="section-sub">The steps you take in the first days after an accident can make a big difference in your recovery and your insurance claim. Here is what to do.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>Seek Medical Attention</h3>
+        <p>Get checked even if you feel fine. Whiplash, concussions, and soft tissue injuries often do not show symptoms for days. Early evaluation protects your health and your claim.</p>
+      </div>
+      <div class="step">
+        <h3>Document Everything</h3>
+        <p>Take photos of the scene and your injuries. Get the police report number. Save contact info for witnesses. Keep every medical record and receipt.</p>
+      </div>
+      <div class="step">
+        <h3>Contact Your Insurance</h3>
+        <p>Michigan no-fault (PIP) covers your medical care after an auto accident regardless of who was at fault. Report the accident promptly and keep your claim number.</p>
+      </div>
+      <div class="step">
+        <h3>Schedule Your Evaluation</h3>
+        <p>Call us to book your first appointment. We will assess your injuries, order X-rays if needed, and create a personalized treatment plan for your recovery.</p>
+      </div>
+      <div class="step">
+        <h3>Follow Your Treatment Plan</h3>
+        <p>Consistent care leads to faster, more complete recovery. Attend your appointments, do your home exercises, and communicate with your care team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Insurance -->
+<section id="insurance" class="insurance">
+  <div class="container">
+    <p class="section-label" style="color:var(--teal)">Insurance &amp; Payment</p>
+    <h2>Your Care Is Covered</h2>
+    <p class="section-sub">Michigan's no-fault auto insurance system means your medical care after a car accident is covered. We handle the paperwork so you can focus on getting better.</p>
+    <div class="insurance-grid">
+      <ul class="insurance-points">
+        <li>
+          <span class="check">✓</span>
+          <div><strong>Michigan No-Fault (PIP) Accepted</strong><span>Your Personal Injury Protection covers medical treatment after an auto accident, regardless of who was at fault.</span></div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div><strong>No Out-of-Pocket Costs for Most Patients</strong><span>Auto accident medical care is typically covered in full by your PIP benefits. No copays, no deductibles for most patients.</span></div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div><strong>We Work Directly With Your Insurer</strong><span>We bill your insurance company directly and handle all documentation, authorizations, and follow-up.</span></div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div><strong>Attorney Coordination Available</strong><span>If you have a personal injury attorney, we coordinate with them to provide the medical documentation your case needs.</span></div>
+        </li>
+      </ul>
+      <div class="insurance-box">
+        <p style="font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:4px">Most auto accident patients pay</p>
+        <p class="big">$0 Out of Pocket</p>
+        <p>Your Michigan no-fault insurance covers your treatment. Call us and we will verify your coverage before your first visit.</p>
+        <a href="tel:+12482309080" class="btn btn-teal">Verify My Coverage — (248) 230-9080</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">Why Motor City Injury Center</p>
+    <h2>Focused on One Thing: Your Recovery</h2>
+    <p class="section-sub">We are not a general practice that sometimes sees accident patients. Post-accident injury care is all we do.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon">📍</div>
+        <h3>Local Southfield Expertise</h3>
+        <p>Deeply rooted in Southfield, we understand the specific needs of post-accident patients in Motor City.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">🎯</div>
+        <h3>Specialized Injury Care</h3>
+        <p>Our team specializes exclusively in treating injuries resulting from motor vehicle accidents.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">👨‍⚕️</div>
+        <h3>Multidisciplinary Approach</h3>
+        <p>Chiropractor, medical doctor, and nurse practitioner working together to provide collaborative care.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">⚡</div>
+        <h3>Streamlined Process</h3>
+        <p>Start your care immediately with our simplified booking and intake process. No waiting weeks for an appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Patient Journey -->
+<section class="journey">
+  <div class="container">
+    <p class="section-label">What to Expect</p>
+    <h2>Your Recovery Journey</h2>
+    <p class="section-sub">From your first visit to full recovery, here is what the process looks like.</p>
+    <div class="journey-timeline">
+      <div class="journey-step">
+        <p class="phase">Visit 1</p>
+        <h3>Evaluation &amp; Diagnosis</h3>
+        <p>Your first appointment is a thorough evaluation to understand your injuries and build your treatment plan.</p>
+        <ul>
+          <li>Detailed consultation &amp; history</li>
+          <li>Physical examination</li>
+          <li>X-rays if needed</li>
+          <li>Personalized treatment plan</li>
+        </ul>
+      </div>
+      <div class="journey-step">
+        <p class="phase">Weeks 1–6</p>
+        <h3>Active Treatment</h3>
+        <p>Regular visits focused on reducing pain, restoring mobility, and rebuilding strength.</p>
+        <ul>
+          <li>Chiropractic adjustments</li>
+          <li>Physical therapy sessions</li>
+          <li>Pain management as needed</li>
+          <li>Progress tracking &amp; plan updates</li>
+        </ul>
+      </div>
+      <div class="journey-step">
+        <p class="phase">Ongoing</p>
+        <h3>Recovery &amp; Prevention</h3>
+        <p>As you heal, we shift focus to long-term strength, flexibility, and preventing future problems.</p>
+        <ul>
+          <li>Home exercise program</li>
+          <li>Maintenance adjustments</li>
+          <li>Return to work &amp; activities</li>
+          <li>Long-term wellness guidance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section>
+  <div class="container">
+    <p class="section-label">Patient Stories</p>
+    <h2>What Our Patients Say</h2>
+    <p class="section-sub">Real feedback from people who came to us after an accident and got their lives back.</p>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"After my accident I could barely turn my neck. The team here got me back to normal in a few weeks. They explained everything and made the whole process easy."</blockquote>
+        <p class="author">Marcus T.<span>Whiplash recovery · Southfield</span></p>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I was worried about dealing with insurance after my crash. They handled all the paperwork and I never had to pay anything out of pocket. The care was excellent too."</blockquote>
+        <p class="author">Denise R.<span>Back injury · Detroit</span></p>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"They got me in the same day I called. The doctor, chiropractor, and nurse practitioner all worked together on my case. I felt like they really cared about my recovery."</blockquote>
+        <p class="author">James W.<span>Multi-injury recovery · Oak Park</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visit + Appointment Form -->
+<section id="visit" class="visit-section">
+  <div class="container">
+    <div class="visit-grid">
+      <div class="visit-info">
+        <p class="section-label" style="color:var(--teal)">Visit Us</p>
+        <h2 style="margin-bottom:20px">Southfield Location</h2>
+
+        <h3>📍 Address</h3>
+        <p>17515 W 9 Mile Rd, Suite 180<br>Southfield, MI 48075</p>
+        <p style="margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=17515+W+9+Mile+Rd+Ste+180+Southfield+MI+48075" target="_blank" rel="noopener">Get Directions →</a></p>
+
+        <h3>📞 Phone</h3>
+        <p><a href="tel:+12482309080">(248) 230-9080</a></p>
+
+        <h3>✉️ Email</h3>
+        <p><a href="mailto:office@motorcityinjurycenter.com">office@motorcityinjurycenter.com</a></p>
+
+        <h3>🕐 Hours</h3>
+        <table class="hours-table">
+          <tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>Closed</td></tr>
+          <tr><td>Thursday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Friday</td><td>Closed</td></tr>
+          <tr><td>Saturday</td><td>Closed</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <span class="open-pill" id="openPill">Checking hours…</span>
+      </div>
+
+      <div class="form-card" id="appointment">
+        <h3>Request an Appointment</h3>
+        <p>Fill out the form below and we will call you back to confirm your appointment, usually within one business hour.</p>
+        <form id="apptForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" required placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" required placeholder="(248) 555-0100">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@email.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="accident-date">Date of Accident</label>
+              <input type="date" id="accident-date">
+            </div>
+            <div class="form-group">
+              <label for="preferred">Preferred Day</label>
+              <select id="preferred">
+                <option value="">Select a day…</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Thursday</option>
+                <option>As soon as possible</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="injury">Brief Description of Injury</label>
+            <textarea id="injury" rows="3" placeholder="e.g. Neck pain and headaches after a rear-end collision last week…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-teal" style="width:100%;padding:14px;font-size:1rem">Request My Appointment →</button>
+          <div class="form-success" id="formSuccess">✓ Thank you! We received your request and will call you back within one business hour to confirm your appointment.</div>
+          <p style="font-size:.8rem;color:#9CA3AF;margin-top:12px;text-align:center">Your information is confidential and protected under HIPAA. We will never share your details.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Band -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Do not Wait to Get the Care You Need</h2>
+    <p>Injuries that go untreated can turn into chronic pain. Call today and start your recovery.</p>
+    <a href="tel:+12482309080" class="btn btn-white">Call (248) 230-9080</a>
+    <a href="#appointment" class="btn btn-navy">Book Online</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Motor City Injury Center, LLC</h4>
+        <p>Specialized post-accident injury care in Southfield, Michigan. Chiropractic care, pain management, and rehabilitation for auto accident injuries.</p>
+        <p style="margin-top:12px">17515 W 9 Mile Rd, Ste 180<br>Southfield, MI 48075<br>(248) 230-9080<br>office@motorcityinjurycenter.com</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Chiropractic Care</a>
+        <a href="#services">Pain Management</a>
+        <a href="#services">Rehabilitation</a>
+        <a href="#after-accident">After an Accident</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#insurance">Insurance &amp; Payment</a>
+        <a href="#about">Why Choose Us</a>
+        <a href="#appointment">Book Appointment</a>
+        <a href="#visit">Contact &amp; Hours</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Motor City Injury Center, LLC. All rights reserved. &nbsp;|&nbsp; Photos: Unsplash.</p>
+      <p style="margin-top:8px">Demo redesign by Lexis Sapphire Studio. This is a concept website created to demonstrate a modern redesign. Not affiliated with Motor City Injury Center, LLC.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Live open/closed indicator — Mon, Tue, Thu 9 AM - 5 PM
+function updateOpenStatus(){
+  var now = new Date();
+  var day = now.getDay(); // 0=Sun, 1=Mon, 2=Tue, 4=Thu
+  var hour = now.getHours();
+  var isOpenDay = (day === 1 || day === 2 || day === 4);
+  var isOpenHour = hour >= 9 && hour < 17;
+  var pill = document.getElementById('openPill');
+  if(isOpenDay && isOpenHour){
+    pill.textContent = '● Open Now — Closes at 5:00 PM';
+    pill.className = 'open-pill open';
+  } else {
+    var nextDay = 'Monday';
+    if(day === 1 && hour < 9) nextDay = 'today at 9:00 AM';
+    else if(day === 1) nextDay = 'Tuesday at 9:00 AM';
+    else if(day === 2 && hour < 9) nextDay = 'today at 9:00 AM';
+    else if(day === 2) nextDay = 'Thursday at 9:00 AM';
+    else if(day === 3) nextDay = 'Thursday at 9:00 AM';
+    else if(day === 4 && hour < 9) nextDay = 'today at 9:00 AM';
+    else nextDay = 'Monday at 9:00 AM';
+    pill.textContent = '● Currently Closed — Opens ' + nextDay;
+    pill.className = 'open-pill closed';
+  }
+}
+updateOpenStatus();
+setInterval(updateOpenStatus, 60000);
+
+// Appointment form — UI only, shows thank-you message
+function submitForm(e){
+  e.preventDefault();
+  var success = document.getElementById('formSuccess');
+  success.style.display = 'block';
+  document.getElementById('apptForm').reset();
+  success.scrollIntoView({behavior:'smooth', block:'center'});
+}
+</script>
+</body>
+</html>

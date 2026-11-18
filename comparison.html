@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before &amp; After — Motor City Injury Center Website Redesign | Lexis Sapphire Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B3A5C;--navy-dark:#12293F;--teal:#2A9D8F;--teal-dark:#1F7A6E;--cream:#F7F5F0;--warm-gray:#6B7280;--light-gray:#E5E7EB;--red:#DC2626;--green:#059669}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1F2937;line-height:1.6;background:var(--cream)}
+h1,h2,h3{font-family:'Merriweather',Georgia,serif;color:var(--navy)}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;text-align:center;padding:48px 20px 36px}
+header h1{color:#fff;font-size:2rem;margin-bottom:8px}
+header p{color:#D1D5DB;font-size:1.1rem;max-width:650px;margin:0 auto}
+header .badge{display:inline-block;background:var(--teal);color:#fff;padding:6px 16px;border-radius:20px;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:48px 0 32px}
+.panel{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.panel-label{padding:16px 20px;font-weight:800;font-size:1rem;display:flex;justify-content:space-between;align-items:center}
+.panel-label.before{background:#FEF2F2;color:var(--red);border-bottom:2px solid #FECACA}
+.panel-label.after{background:#ECFDF5;color:var(--green);border-bottom:2px solid #A7F3D0}
+.panel-label .tag{font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:12px;letter-spacing:.06em;text-transform:uppercase}
+.panel-label.before .tag{background:var(--red);color:#fff}
+.panel-label.after .tag{background:var(--green);color:#fff}
+/* Browser window frame */
+.browser-frame{border-bottom:1px solid var(--light-gray)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#F3F4F6;border-bottom:1px solid var(--light-gray)}
+.browser-dot{width:11px;height:11px;border-radius:50%}
+.browser-dot.r{background:#FF5F57}.browser-dot.y{background:#FEBC2E}.browser-dot.g{background:#28C840}
+.browser-url{flex:1;background:#fff;border:1px solid var(--light-gray);border-radius:6px;padding:4px 12px;font-size:.8rem;color:var(--warm-gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser-frame iframe{width:100%;height:800px;border:none;display:block}
+/* Before mockup */
+.before-mockup{padding:32px 24px;min-height:800px;background:#fff}
+.before-mockup .mock-hero{background:#F3F4F6;border-radius:8px;padding:32px 24px;text-align:center;margin-bottom:20px}
+.before-mockup .mock-hero h3{font-size:1.4rem;color:#374151;margin-bottom:8px}
+.before-mockup .mock-hero p{color:#6B7280;font-size:.9rem}
+.before-mockup .mock-img{background:#E5E7EB;border-radius:8px;height:180px;display:flex;align-items:center;justify-content:center;color:#9CA3AF;font-size:.85rem;margin-bottom:20px}
+.before-mockup .mock-section{margin-bottom:20px}
+.before-mockup .mock-section h4{font-size:1rem;color:#374151;margin-bottom:6px}
+.before-mockup .mock-section p{font-size:.88rem;color:#6B7280}
+.before-mockup .mock-note{background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:16px;font-size:.88rem;color:#92400E}
+.before-mockup .mock-note strong{display:block;margin-bottom:4px}
+.preview-label{text-align:center;padding:12px;font-size:.85rem;color:var(--warm-gray);background:#F9FAFB}
+.preview-label strong{color:var(--navy)}
+.cta-row{text-align:center;padding:0 0 40px}
+.btn{display:inline-block;padding:14px 36px;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;border:none;text-decoration:none}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-dark)}
+.btn-navy{background:var(--navy);color:#fff;margin-left:12px}
+.btn-navy:hover{background:var(--navy-dark)}
+/* Lists */
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding-bottom:56px}
+.list-card{background:#fff;border-radius:14px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.list-card h2{font-size:1.3rem;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.list-card.missing h2{color:var(--red)}
+.list-card.included h2{color:var(--green)}
+.list-card ul{list-style:none;padding:0}
+.list-card li{padding:10px 0 10px 28px;border-bottom:1px solid #F3F4F6;position:relative;font-size:.95rem}
+.list-card li:last-child{border-bottom:none}
+.list-card.missing li::before{content:'✗';position:absolute;left:0;color:var(--red);font-weight:800}
+.list-card.included li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:800}
+footer{background:var(--navy-dark);color:#9CA3AF;text-align:center;padding:32px 20px;font-size:.85rem}
+footer p{color:#9CA3AF}
+footer a{color:#fff;font-weight:600}
+@media(max-width:900px){
+  .panels{grid-template-columns:1fr}
+  .lists{grid-template-columns:1fr}
+  .browser-frame iframe{height:600px}
+  .before-mockup{min-height:auto}
+  header h1{font-size:1.5rem}
+  .btn-navy{margin-left:0;margin-top:12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <span class="badge">Lexis Sapphire Studio · Website Redesign</span>
+    <h1>Motor City Injury Center — Before &amp; After</h1>
+    <p>Your current website is a single Wix template page. Here is what a proper clinic website looks like — built to turn accident victims into patients.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="panels">
+    <!-- BEFORE -->
+    <div class="panel">
+      <div class="panel-label before">
+        <span>❌ Before — Current Site</span>
+        <span class="tag">motorcityinjurycenter.com</span>
+      </div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <span class="browser-dot r"></span><span class="browser-dot y"></span><span class="browser-dot g"></span>
+          <span class="browser-url">🔒 www.motorcityinjurycenter.com</span>
+        </div>
+      </div>
+      <div class="before-mockup">
+        <div class="mock-hero">
+          <h3>Complete Care for Your Recovery Journey</h3>
+          <p>Expert post-accident injury care in Michigan. Specialized treatment designed to help you regain your strength and mobility.</p>
+        </div>
+        <div class="mock-img">🖼️ AI-generated stock image<br>(not a real photo of the clinic)</div>
+        <div class="mock-section">
+          <h4>Our Approach</h4>
+          <p>We prioritize specialized recovery through a multidisciplinary lens. Our philosophy centers on immediate diagnostics combined with patient-focused therapeutic plans.</p>
+        </div>
+        <div class="mock-section">
+          <h4>Our Specialized Services</h4>
+          <p><strong>Chiropractic Care</strong> — Non-invasive adjustments targeting spinal alignment…</p>
+          <p><strong>Pain Management</strong> — Comprehensive strategies to alleviate acute and chronic pain…</p>
+          <p><strong>Rehabilitation</strong> — Guided therapy and rehabilitation programs…</p>
+        </div>
+        <div class="mock-section">
+          <h4>Why Motor City?</h4>
+          <p>Local Southfield Expertise · Specialized Injury Care · Multidisciplinary Approach · Comprehensive Recovery · Streamlined Appointment Process</p>
+        </div>
+        <div class="mock-section">
+          <h4>Ready to Recover? Contact Us</h4>
+          <p>We are here to help you get back on your feet. Reach out today for specialized post-accident care.</p>
+        </div>
+        <div class="mock-note">
+          <strong>⚠️ That is the entire website.</strong>
+          One page. No phone number on the homepage. No address. No hours. No booking form. No insurance info. No patient reviews. No team bios. No "what to do after an accident" guide.
+        </div>
+      </div>
+      <div class="preview-label">This is a summary of the current site · Visit <strong>motorcityinjurycenter.com</strong> to see it live</div>
+    </div>
+
+    <!-- AFTER -->
+    <div class="panel">
+      <div class="panel-label after">
+        <span>✅ After — New Design</span>
+        <span class="tag">Live Preview</span>
+      </div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <span class="browser-dot r"></span><span class="browser-dot y"></span><span class="browser-dot g"></span>
+          <span class="browser-url">🔒 rishaofficial.github.io/motor-city-injury-demo</span>
+        </div>
+        <iframe src="https://rishaofficial.github.io/motor-city-injury-demo/" title="Motor City Injury Center — New Website Demo" loading="lazy"></iframe>
+      </div>
+      <div class="preview-label"><strong>Live Preview — Scroll to explore</strong> · This is the actual redesigned website, running in the frame above</div>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="https://rishaofficial.github.io/motor-city-injury-demo/" target="_blank" rel="noopener" class="btn btn-teal">View Full Demo →</a>
+    <a href="https://lexis-sapphire-intake.netlify.app/" target="_blank" rel="noopener" class="btn btn-navy">Start Your Project</a>
+  </div>
+
+  <div class="lists">
+    <div class="list-card missing">
+      <h2>✗ What Is Missing Now</h2>
+      <ul>
+        <li>No phone number on the homepage</li>
+        <li>No address or location on the homepage</li>
+        <li>No hours listed anywhere</li>
+        <li>No online booking or appointment form</li>
+        <li>No insurance / no-fault information</li>
+        <li>No "What to Do After an Accident" guide</li>
+        <li>No patient testimonials or reviews</li>
+        <li>No team or doctor bios</li>
+        <li>No services detail — just 3 short paragraphs</li>
+        <li>All images are AI-generated, not real clinic photos</li>
+        <li>Single page only — no depth for Google to rank</li>
+        <li>No clear call to action to book or call</li>
+      </ul>
+    </div>
+    <div class="list-card included">
+      <h2>✓ What Is Included in the Redesign</h2>
+      <ul>
+        <li>Phone number in the header, hero, and footer</li>
+        <li>Full address with Google Maps directions link</li>
+        <li>Hours with a live open/closed indicator</li>
+        <li>Appointment request form with injury details</li>
+        <li>Insurance section: No-Fault PIP, $0 out of pocket</li>
+        <li>5-step "What to Do After an Accident" guide</li>
+        <li>Patient testimonials with 5-star ratings</li>
+        <li>Multidisciplinary team highlighted (DC, MD, NP)</li>
+        <li>Detailed service cards with specific treatments</li>
+        <li>"What We Treat" section for common injuries</li>
+        <li>Patient journey: evaluation → treatment → recovery</li>
+        <li>Clear CTAs on every section: Book or Call</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Demo redesign by <a href="https://rishaofficial.github.io/lexis-sapphire-studio/" target="_blank" rel="noopener">Lexis Sapphire Studio</a> · Detroit, MI</p>
+  <p style="margin-top:8px">This is a concept website created to demonstrate a modern redesign. Not affiliated with Motor City Injury Center, LLC.</p>
+</footer>
+
+</body>
+</html>
